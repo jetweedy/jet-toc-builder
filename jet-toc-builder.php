@@ -19,7 +19,7 @@ function jet_toc_builder( $atts ){
 	
 	$html = $content;
 	$html = preg_replace("/<a id='jet_toc_[0-9]+'><\/a>/s", "", $html);
-	$hpattern = "/<h([2|3]).*?>(.*?)<\/h\\1>/si";
+	$hpattern = "/<h([2|3|4]).*?>(.*?)<\/h\\1>/si";
 	$menuHTML = "";
 	if (preg_match_all($hpattern, $html, $matches)) {
 		for ($m=0;$m<count($matches[0]);$m++) {
